@@ -14,7 +14,7 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:url("/Dashboard/Assets/Dashboard-bg.jpeg");
+background:url("/Dashboard/Assets/Dashboard-bg-with-logo.jpg");
 background-size:cover;
 font-family:Tahoma, Verdana, sans-serif;
 }
@@ -55,7 +55,7 @@ align-items:center;
 
 .xpTitleTextAyan{
    font-size: medium;
-   margin-right: 630px;
+   margin-right: 610px;
 }
 
 
@@ -193,6 +193,8 @@ padding:4px;
 font-size:14px;
 }
 
+
+
 .xpSideBoxAyan ul{
 list-style:none;
 padding:6px;
@@ -209,11 +211,20 @@ font-size:12px;
 margin-bottom:8px;
 cursor: pointer;
 
-
 }
 
 .xpSideBoxAyan li:hover{
    background-color: rgb(235, 236, 237);
+}
+
+
+
+li a{
+    text-decoration: none;   /* underline remove */
+    color: inherit;          /* text color same */
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* CONTENT */
@@ -317,7 +328,7 @@ text-shadow:1px 1px 2px black;
 ================================= */
 
 .window{
-z-index: 2;
+z-index: 3;
 display:none;
 width:800px;
 height:600px;
@@ -339,11 +350,12 @@ padding:6px 10px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-font-size: small;
+font-size: medium;
 }
 
 .title-bar span{
-margin-right:610px;
+margin-right:600px;
+font-size: medium;
 }
 
 .window-buttons {
@@ -571,7 +583,7 @@ height:190px;
 width:250px;
 background:#0e0e0e;
 border:1px solid #2b2b2b;
-border-radius:12px;
+border-radius:2px;
 overflow:hidden;
 color:white;
 }
@@ -599,6 +611,7 @@ font-size:14px;
 ================================= */
 
 .contact-me{
+z-index: 4;
 display:none;
 height: 600px;
 width:800px;
@@ -609,30 +622,59 @@ box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
 .title-barr{
+height: 25px;
 background:linear-gradient(#3c7df0,#1c4db6);
 color:white;
 padding:5px 10px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-font-weight:bold;
 }
 
 .title-barr #Header{
-margin-right:520px;
+margin-right:600px;
+font-size: medium;
 }
 
-.window-buttons span{
-display:inline-block;
-width:18px;
-height:18px;
-margin-left:4px;
-background:#d6d6d6;
-border:1px solid #000;
-text-align:center;
-line-height:16px;
-font-weight:bold;
-cursor:pointer;
+
+
+.ContactMeMaximize{
+padding-bottom: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:16px;
+height:16px;
+background:#e6e6e6;
+color: #000;
+border:1px solid #333;
+cursor: pointer;
+}
+
+.ContactMeMinimize{
+padding-bottom: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:16px;
+height:16px;
+background:#e6e6e6;
+color: #000;
+border:1px solid #333;
+cursor: pointer;
+}
+
+.ContactMeCloseBtn{
+padding-bottom: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:16px;
+height:16px;
+background:#ff5b5b;
+color: white;
+border:1px solid #333;
+cursor: pointer;
 }
 
 
@@ -641,11 +683,14 @@ cursor:pointer;
 ================================= */
 
 .form{
+font-size: small;
 padding:10px;
 }
 
 .form input{
 width:100%;
+height: 25px;
+margin-top: 5px;
 padding:5px;
 margin-bottom:8px;
 border:1px solid #7f9db9;
@@ -653,13 +698,29 @@ border:1px solid #7f9db9;
 
 textarea{
 width:100%;
-height:260px;
+height:250px;
+margin-top: 5px;
 border:1px solid #7f9db9;
 resize:none;
 padding:8px;
 }
 
+.sendBtn{
+   margin-top: 5px;
+   height: 25px;
+   width: 100px;
+   font-size: small;
+   background-color:#2849bf;
+   border-color: #1649b7;
+   color: white;
+}
+
+.sendBtn:hover{
+   background-color: #0d3fab;
+}
+
 .footer{
+   height: 30px;
 font-size:12px;
 padding:5px;
 border-top:1px solid #b5b5b5;
@@ -736,10 +797,12 @@ display:flex;
    height: 22px;
    padding-left: 5px;
    margin-left: 5px;
-   width: 130px;
+   width: auto;
    color: white;
    font-size: small;
    background-color: #0d3fab;
+   border-radius: 2px;
+   border: 2px solid #0a3287;
 }
 
 .tab span{
@@ -753,6 +816,7 @@ display:flex;
    height: 15px;
    width: 15px;
    margin-left: 15px;
+   margin-right: 5px;
    padding-bottom: 2px;
    background-color: rgba(219, 52, 52, 0.879);
    border-radius: 1px;
@@ -769,10 +833,10 @@ display:flex;
 ================================= */
 
 #clock{
-margin-left:500px ;
+margin-left:480px ;
 display:flex;
 align-items:center;
-width:150px;
+width:160px;
 height:22px;
 background:#0e9bf0;
 color:white;
@@ -783,6 +847,7 @@ border-left:0.5px solid #000;
 
 #clock img{
 margin-left:5px;
+cursor: pointer;
 }
 
 #task-time{
@@ -802,7 +867,7 @@ width:80px;
 .start-menu{
 z-index: 2;
 display:none;
-margin-top: 245px;
+margin-top: 190px;
 margin-right: 1165px;
 width:360px;
 background:#fff;
@@ -856,9 +921,19 @@ padding:6px;
 cursor:pointer;
 }
 
+
+
+.menu-item span{
+   margin-left: 5px;
+}
+
+.Highlight-MenuItem{
+   margin-left: 5px;
+}
+
 .menu-item:hover{
-background:#99c5fe;
-color:white;
+background-color: #2e77d7;
+
 
 }
 
@@ -870,14 +945,15 @@ opacity:1;
 }
 
 .menu-item img{
-width:25px;
+height: 25px;
+width: 25px;
 }
 
 /* DESCRIPTION TEXT */
 
 .menu-item p{
 font-size:12px;
-color:gray;
+color:rgb(65, 65, 65);
 }
 
 /* RIGHT SIDE */
@@ -886,6 +962,14 @@ color:gray;
 width:50%;
 background:#d6e8ff;
 padding:10px;
+}
+
+.right-menu a{
+    text-decoration: none;   /* underline remove */
+    color: inherit;          /* text color same */
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* ALL PROGRAMS */
@@ -923,13 +1007,23 @@ padding:5px 10px;
 cursor:pointer;
 }
 
-.logoff{
-background:#ffcc00;
+.log-off{
+display: flex;
+align-items: center;
+font-size: small;
+color: white;
+gap: 4px;
+cursor: pointer;
 }
 
-.shutdown{
-background:#ff3b3b;
-color:white;
+.shut-down{
+display: flex;
+align-items: center;
+font-size: small;
+color: white;
+gap: 4px;
+cursor: pointer;
+
 }
 
 
@@ -998,6 +1092,9 @@ background:#dcdcdc;
 }
 
 
+
+
+
 .close{
 background:#e81123;
 }
@@ -1045,3 +1142,78 @@ border:none;
 }
 
 
+
+/* ========================== PAINT ========================= */
+.Paint-window{
+width:800px;
+height:600px;
+z-index: 5;
+background:#f2f2f2;
+border:2px solid #1e53c5;
+border-radius: 5px;
+font-family:Tahoma,Verdana;
+display:none;
+flex-direction:column;
+   
+}
+
+
+.xp-paint{
+width:780px;
+height:300px;
+border:3px solid #000;
+background:#c0c0c0;
+display:flex;
+flex-direction:column;
+font-family:Tahoma;
+}
+
+.tool-bar{
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 5px;
+}
+
+.tool-bar button{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 20px;
+padding:5px 10px;
+margin-left: 10px;
+cursor:pointer;
+font-size: small;
+}
+
+#paintCanvas{
+flex:1;
+background:white;
+cursor:crosshair;
+}
+
+.Paintmaximize{
+padding-bottom: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:16px;
+height:16px;
+background:#e6e6e6;
+color: #000;
+border:1px solid #333;
+cursor: pointer;
+}
+
+.Paintminimize{
+padding-bottom: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:16px;
+height:16px;
+background:#e6e6e6;
+color: #000;
+border:1px solid #333;
+cursor: pointer;
+}
