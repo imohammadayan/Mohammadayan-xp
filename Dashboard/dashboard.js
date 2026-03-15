@@ -17,6 +17,7 @@ const AboutMeMaximize = document.querySelector(".maximize")
 const AboutMeMinimize = document.querySelector(".minimize")
 const tab = document.querySelector(".AboutMeTab")
 const tabCloseBtn = document.querySelector(".tabCloseBtn")
+const AboutMeMenu = document.querySelector(".AboutMeMenu")
 
 
 
@@ -49,6 +50,15 @@ tabCloseBtn.addEventListener("click", function(){
      tab.style.display = "none"
 })
 
+//Menu
+
+// Menu
+AboutMeMenu.addEventListener("click", function(){
+    menu.style.display = "none"
+    AboutMeBrowser.style.display = "flex";
+    tab.style.display = "flex"
+})
+
 
 
 
@@ -63,6 +73,7 @@ const ResumeMaximize = document.querySelector(".ResumeMaximize")
 const ResumeMinimize = document.querySelector(".ResumeMinimize")
 const MyResumeTab = document.querySelector(".MyProectsTab")
 const tabCloseBtnMyResume = document.querySelector(".tabCloseBtnMyResume")
+const MyResumeMenu = document.querySelector(".MyResumeMenu")
 
 Resume.addEventListener("click", function(){
     ResumeBrowser.style.display = "flex";
@@ -93,6 +104,14 @@ tabCloseBtnMyResume.addEventListener("click" , function(){
      MyResumeTab.style.display = "none"
 })
 
+// Menu
+MyResumeMenu.addEventListener("click", function(){
+    menu.style.display = "none"
+   ResumeBrowser.style.display = "flex";
+    MyResumeTab.style.display = "flex"
+})
+
+
 
 
 
@@ -106,6 +125,7 @@ const MyProjectsmaximize = document.querySelector(".MyProjectsmaximize")
 const MyProjectsminimize = document.querySelector(".MyProjectsminimize")
 const MyProjectsTab = document.querySelector(".MyProjectsTab")
 const tabCloseBtnMyProjects = document.querySelector(".tabCloseBtnMyProjects")
+const MyProjectMenu = document.querySelector(".MyProjectMenu")
  
 MyProjectClose.addEventListener("click", function(){
     MyProjectsTab.style.display = "none"
@@ -140,6 +160,13 @@ tabCloseBtnMyProjects.addEventListener("click" , function(){
 })
 
 
+// Menu
+MyProjectMenu.addEventListener("click", function(){
+    menu.style.display = "none"
+    MyProjectsTab.style.display = "flex"
+    MyProject.style.display = "inline";
+})
+
 
 
 // ================================Contact Me===================================
@@ -153,6 +180,7 @@ const ContactMeMaximize = document.querySelector(".ContactMeMaximize")
 const ContactMeMinimize = document.querySelector(".ContactMeMinimize")
 const ContactMeTab = document.querySelector(".ContactMeTab")
 const tabCloseBtnContactMe = document.querySelector(".tabCloseBtnContactMe")
+const ContactMeMenu = document.querySelector(".ContactMeMenu")
  
 ContactMeCloseBtn.addEventListener("click", function(){
     ContactMeTab.style.display = "none"
@@ -185,11 +213,19 @@ tabCloseBtnContactMe.addEventListener("click" , function(){
 })
 
 
+// Menu
+ContactMeMenu.addEventListener("click", function(){
+    menu.style.display = "none"
+    ContactMeTab.style.display = "flex"
+    ContactMe.style.display = "inline";
+})
 
 
 
 
-// ================================  Start Menu=========================================
+
+
+// ================================  Start Menu =========================================
 
 
 const startButton = document.querySelector("#startButton")
@@ -209,7 +245,7 @@ menu.style.display = "inline"
 
 
 
-// =================================Window Sound===================================
+// ================================= Window Sound ===================================
 
 // window.onload = function(){
 //     document.getElementById("xpSound").play();
@@ -218,7 +254,7 @@ menu.style.display = "inline"
 
 
 
-// =====================================Email JS==============================================
+// ===================================== Email JS ==============================================
 
 
 
@@ -260,6 +296,156 @@ alert("Failed to send message");
 
 
 
+
+
+// ========================================= TIME =======================================================
+
+function updateTime() {
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    let ampm = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+
+    minutes = minutes.toString().padStart(2, "0");
+
+    document.getElementById("task-time").textContent =
+        hours + ":" + minutes + " " + ampm;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+
+
+
+// ======================================== PAINT BOWSER ================================
+
+const Paint = document.querySelector(".paint")
+const PaintWindow = document.querySelector(".Paint-window")
+const PaintClose= document.querySelector(".PaintClose")
+const PaintTab= document.querySelector(".PaintTab")
+const tabCloseBtnPaint = document.querySelector(".tabCloseBtnPaint")
+const PaintMaximize = document.querySelector(".Paintmaximize")
+const PaintMinimize = document.querySelector(".Paintminimize")
+
+
+Paint.addEventListener("click", function(){
+menu.style.display = "none"
+PaintTab.style.display = "flex"
+PaintWindow.style.display = "flex";
+
+})
+
+
+PaintClose.addEventListener("click", function(){
+PaintWindow.style.display = "none";
+PaintTab.style.display = "none"
+})
+
+// Tab
+tabCloseBtnPaint.addEventListener("click", function(){
+PaintWindow.style.display = "none";
+PaintTab.style.display = "none"
+})
+
+// Maximize
+
+PaintMaximize.addEventListener("click", function(){
+PaintWindow.style.height = "100%";
+PaintWindow.style.width = "100%"
+
+})
+
+
+PaintMinimize.addEventListener("click", function(){
+PaintWindow.style.height = "600px";
+PaintWindow.style.width = "800px"
+})
+
+
+
+// ========================================= PAINT ======================================
+
+const canvas = document.getElementById("paintCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = 800;
+canvas.height = 500;
+
+let drawing = false;
+let tool = "pencil";
+
+const colorPicker = document.getElementById("colorPicker");
+const brushSize = document.getElementById("brushSize");
+
+document.getElementById("pencil").onclick = () => tool="pencil";
+document.getElementById("eraser").onclick = () => tool="eraser";
+
+canvas.addEventListener("mousedown", () => drawing = true);
+canvas.addEventListener("mouseup", () => {
+drawing=false;
+ctx.beginPath();
+});
+
+canvas.addEventListener("mousemove", draw);
+
+function draw(e){
+
+if(!drawing) return;
+
+if(tool==="eraser"){
+ctx.strokeStyle="white";
+}else{
+ctx.strokeStyle=colorPicker.value;
+}
+
+ctx.lineWidth=brushSize.value;
+ctx.lineCap="round";
+
+ctx.lineTo(e.offsetX,e.offsetY);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(e.offsetX,e.offsetY);
+
+}
+
+document.getElementById("clear").onclick=()=>{
+ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+
+document.getElementById("save").onclick=()=>{
+const link=document.createElement("a");
+link.download="drawing.png";
+link.href=canvas.toDataURL();
+link.click();
+}
+
+
+//=================================== Log Off & Shut down =====================================
+
+
+const logOff = document.querySelector(".log-off")
+const shutdown = document.querySelector(".shut-down")
+
+
+logOff.addEventListener("click" , function(){
+    setTimeout(()=>{
+       window.location.href = "/Login-Page/Login-Page.html";
+    },2000)
+
+})
+
+shutdown.addEventListener("click" , function(){
+    setTimeout(()=>{
+       window.location.href = "/Start/index.html";
+    },2000)
+    
+    
+})
 
 
 
