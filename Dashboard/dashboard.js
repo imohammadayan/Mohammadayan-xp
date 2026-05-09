@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 //===============================ABOUT ME =============================
 
 
@@ -18,6 +13,8 @@ const AboutMeMinimize = document.querySelector(".minimize")
 const tab = document.querySelector(".AboutMeTab")
 const tabCloseBtn = document.querySelector(".tabCloseBtn")
 const AboutMeMenu = document.querySelector(".AboutMeMenu")
+const AboutMeText = document.querySelectorAll(".AboutMeText")
+const xpLeftPanelAyan = document.querySelector(".xpLeftPanelAyan")
 
 
 
@@ -34,6 +31,11 @@ AboutMeCloseBtn.addEventListener("click", function(){
 AboutMeMaximize.addEventListener("click",function(){
     AboutMeBrowser.style.width = "100%"
     AboutMeBrowser.style.height = "100%"
+    xpLeftPanelAyan.style.width = "200px"
+    AboutMeText.forEach((text)=>{
+        text.style.fontSize = "large"
+        text.style.marginTop = "20px"
+    })
     
 })
 
@@ -42,6 +44,10 @@ AboutMeMinimize.addEventListener("click",function(){
     tab.style.display = "flex"
     AboutMeBrowser.style.width = "800px"
     AboutMeBrowser.style.height = "600px"
+    AboutMeText.forEach((text)=>{
+        text.style.fontSize = "small"
+        text.style.marginTop = "0px"
+    })
 })
 
 // Tab
@@ -71,7 +77,7 @@ const ResumeBrowser = document.querySelector(".xp-browser")
 const ResumeCloseBtn = document.querySelector("#resumeCloseBtn")
 const ResumeMaximize = document.querySelector(".ResumeMaximize")
 const ResumeMinimize = document.querySelector(".ResumeMinimize")
-const MyResumeTab = document.querySelector(".MyProectsTab")
+const MyResumeTab = document.querySelector(".MyResumeTab")
 const tabCloseBtnMyResume = document.querySelector(".tabCloseBtnMyResume")
 const MyResumeMenu = document.querySelector(".MyResumeMenu")
 
@@ -126,6 +132,11 @@ const MyProjectsminimize = document.querySelector(".MyProjectsminimize")
 const MyProjectsTab = document.querySelector(".MyProjectsTab")
 const tabCloseBtnMyProjects = document.querySelector(".tabCloseBtnMyProjects")
 const MyProjectMenu = document.querySelector(".MyProjectMenu")
+const Projects = document.querySelectorAll(".projects")
+const SideBar = document.querySelector(".sidebar")
+const Card = document.querySelectorAll(".card")
+const CardImg = document.querySelectorAll(".cardImg")
+
  
 MyProjectClose.addEventListener("click", function(){
     MyProjectsTab.style.display = "none"
@@ -144,6 +155,21 @@ MyProjectIcon.addEventListener("click", function(){
 MyProjectsmaximize.addEventListener("click" , function(){
     MyProject.style.height = "100%"
     MyProject.style.width = "100%"
+    SideBar.style.height = "560px"
+    SideBar.style.width = "250px"
+  
+
+    Card.forEach((Card)=>{
+    Card.style.height = "225px"
+    Card.style.width = "400px"
+    Card.style.marginLeft = "100px"
+    })
+
+    CardImg.forEach((img)=>{
+    img.style.height = "160px"
+    })
+    
+
 
 })
 
@@ -151,6 +177,19 @@ MyProjectsmaximize.addEventListener("click" , function(){
 MyProjectsminimize.addEventListener("click" , function(){
     MyProject.style.height = "600px"
     MyProject.style.width = "800px"
+    SideBar.style.height = "460px"
+    SideBar.style.height = "180px"
+
+    Card.forEach((Card)=>{
+    Card.style.height = "190px"
+    Card.style.width = "250px"
+    Card.style.marginLeft = "20px"
+   
+    })
+    CardImg.forEach((img)=>{
+    img.style.height = "115px"
+    })
+    
 })
 
 // Tab
@@ -171,8 +210,6 @@ MyProjectMenu.addEventListener("click", function(){
 
 // ================================Contact Me===================================
 
-
-
 const ContactMe = document.querySelector(".contact-me")
 const ContactMeIcon = document.querySelector("#ContactMe")
 const ContactMeCloseBtn = document.querySelector(".ContactMeCloseBtn")
@@ -181,6 +218,7 @@ const ContactMeMinimize = document.querySelector(".ContactMeMinimize")
 const ContactMeTab = document.querySelector(".ContactMeTab")
 const tabCloseBtnContactMe = document.querySelector(".tabCloseBtnContactMe")
 const ContactMeMenu = document.querySelector(".ContactMeMenu")
+const ContactMeTextArea = document.querySelector(".ContactMeTextArea")
  
 ContactMeCloseBtn.addEventListener("click", function(){
     ContactMeTab.style.display = "none"
@@ -198,12 +236,14 @@ ContactMeIcon.addEventListener("click", function(){
 ContactMeMaximize.addEventListener("click" , function(){
     ContactMe.style.height = "100%"
     ContactMe.style.width = "100%"
+    ContactMeTextArea.style.height = "350px"
 })
 
 // Minimize
 ContactMeMinimize.addEventListener("click" , function(){
     ContactMe.style.height = "600px"
     ContactMe.style.width = "800px"
+    ContactMeTextArea.style.height = "250px"
 })
 
 // Tab
@@ -322,7 +362,7 @@ setInterval(updateTime, 1000);
 
 
 
-// ======================================== PAINT BOWSER ================================
+// ======================================== PAINT WINDOW ================================
 
 const Paint = document.querySelector(".paint")
 const PaintWindow = document.querySelector(".Paint-window")
@@ -364,6 +404,66 @@ PaintWindow.style.width = "100%"
 PaintMinimize.addEventListener("click", function(){
 PaintWindow.style.height = "600px";
 PaintWindow.style.width = "800px"
+})
+
+
+// ====================================== My Achievements =============================
+
+const Achievements = document.querySelector(".Achivements")
+const AchievementsWindow = document.querySelector("#xpExplorer")
+const MyAchievementsClose = document.querySelector(".MyAchievementsClose")
+const MyAchievementsTab = document.querySelector(".MyAchievementsTab")
+const tabCloseBtnMyAchievements = document.querySelector(".tabCloseBtnMyAchievements")
+const MyAchievementsMaximize = document.querySelector(".MyAchievementsmaximize")
+const MyAchievementsMinimize = document.querySelector(".MyAchievementsminimize")
+const items = document.querySelectorAll("#item")
+const xpMainArea = document.querySelector("#xpMainArea")
+
+
+Achievements.addEventListener("click", function(){
+menu.style.display = "none"
+MyAchievementsTab.style.display = "flex"
+AchievementsWindow.style.display = "flex";
+
+})
+
+
+MyAchievementsClose.addEventListener("click", function(){
+AchievementsWindow.style.display = "none";
+MyAchievementsTab.style.display = "none"
+})
+
+// Tab
+tabCloseBtnMyAchievements.addEventListener("click", function(){
+AchievementsWindow.style.display = "none";
+MyAchievementsTab.style.display = "none"
+})
+
+// Maximize
+MyAchievementsMaximize.addEventListener("click", function(){
+AchievementsWindow.style.height = "100%";
+AchievementsWindow.style.width = "100%"
+xpMainArea.style.gridTemplateColumns = "repeat(4, 1fr)";
+
+items.forEach((item)=>{
+   item.style.width = "325px"
+   item.style.height = "250px"
+})
+
+})
+
+
+MyAchievementsMinimize.addEventListener("click", function(){
+AchievementsWindow.style.height = "600px";
+AchievementsWindow.style.width = "800px"
+xpMainArea.style.gridTemplateColumns = "repeat(3, 1fr)";
+
+items.forEach((item)=>{
+   item.style.width = "200px"
+   item.style.height = "130px"
+})
+
+
 })
 
 
@@ -453,27 +553,31 @@ shutdown.addEventListener("click" , function(){
 
 
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ================================ logoff & Shutdown=====================
 
 logoff.addEventListener("click", function(){
     window.location.href = "/Login-Page/Login-Page.html";
           
 })
+
+
+// ======================================InfoContainer=============================
+
+// const infoIcon = document.querySelector("#infoIcon")
+// const infoContainer = document.querySelector("#infoContainer")
+
+// infoIcon.addEventListener("click",function(){
+//     infoContainer.style.display = "flex";
+// })
+
+
+
+
+
+
+
+
+
 
 
 

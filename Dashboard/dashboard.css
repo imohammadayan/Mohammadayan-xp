@@ -1,1079 +1,312 @@
-
 /* =================================
    GLOBAL RESET
 ================================= */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:url("/Dashboard/Assets/Dashboard-bg-with-logo.jpg");
-background-size:cover;
-font-family:Tahoma, Verdana, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url("/Dashboard/Assets/Dashboard-bg-with-logo.jpg");
+    background-size:cover;
+    font-family: Tahoma, "MS Sans Serif", sans-serif;
 }
-
-
-
-/* =================================
-          ABOUT ME
-================================= */
-
-
-#xpWrapAyan{
-width:800px;
-height:600px;
-z-index: 5;
-background:#f2f2f2;
-border:2px solid #1e53c5;
-border-radius: 5px;
-font-family:Tahoma,Verdana;
-display:none;
-flex-direction:column;
-
-
-}
-
-/* TITLE BAR */
-
-.xpTopBarAyan{
-height: 25px;
-background:linear-gradient(#3b73d9,#1e53c5);
-color:white;
-padding:6px 10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-}
-
-.xpTitleTextAyan{
-   font-size: medium;
-   margin-right: 610px;
-}
-
-
-
-.xpWindowButtonsAyan{
-display:flex;
-gap:4px;
-}
-
-.xpBtnAyan{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
-}
-
-.xpBtnCloseAyan{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#ff5b5b;
-border:1px solid #333;
-cursor: pointer;
-}
-
-.maximize{
-   cursor: pointer;
-}
-
-.minimize{
-   cursor: pointer;
-}
-/* MENU */
-
-.xpMenuStripAyan{
-background:#e8e8e8;
-padding:4px 10px;
-font-size:13px;
-}
-
-.xpMenuStripAyan span{
-margin-right:12px;
-}
-
-/* TOOLBAR */
-
-.xpToolbarAyan{
-display: flex;
-align-items: center;
-height: 30px;
-margin-bottom: 2px;
-background:#f6f6f6;
-padding:6px 10px;
-font-size:13px;
-border-bottom:1px solid #ccc;
-}
-
-.xpToolbarAyan span{
-margin-right:15px;
-padding-left: 5px;
-}
-
-
-.Arrow{
-   opacity:0.4;
-}
-
-.opacity{
-   opacity: 0.4;
-}
-
-/* ADDRESS BAR */
-
-.xpAddressBarAyan{
-display: flex;
-background:white;
-padding:6px 10px;
-border-bottom:1px solid #aaa7a7;
-font-size:13px;
-}
-
-#AddressAboutMe{
-   width: 670px;
-   margin-left: 5px;
-   padding-left: 2px;
-   background-color: #ffffff;
-   border: 1px solid rgba(0, 0, 0, 0.317) ;
-   font-size: x-small;
-}
-
-#go{
-   display: flex;
-   margin-left: 5px;
-   gap: 5px;
-
-}
-
-/* MAIN */
-
-.xpMainSectionAyan{
-flex:1;
-display:flex;
-
-}
-
-/* SIDEBAR */
-
-.xpLeftPanelAyan{
-width:150px;
-background:linear-gradient(#7484fe,#3b47a5);;
-padding:6px;
-overflow:auto;
-}
-
-.xpSideBoxAyan{
-background:white;
-border:1px solid #b4c6f2;
-margin-bottom:10px;
-}
-
-.xpSideTitleAyan{
-display: flex;
-background:linear-gradient(#3a66d8,#1e4bc6);
-color:white;
-padding:4px;
-font-size:14px;
-}
-
-
-
-.xpSideBoxAyan ul{
-list-style:none;
-padding:6px;
-font-size:12px;
-}
-
-
-.xpSideBoxAyan span{
-   padding-left: 5px;
-   
-}
-
-.xpSideBoxAyan li{
-margin-bottom:8px;
-cursor: pointer;
-
-}
-
-.xpSideBoxAyan li:hover{
-   background-color: rgb(235, 236, 237);
-}
-
-
-
-li a{
-    text-decoration: none;   /* underline remove */
-    color: inherit;          /* text color same */
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* CONTENT */
-
-.xpContentPanelAyan{
-flex:1;
-padding:15px;
-color:white;
-background-color: #4251c1;
-
-
-}
-
-.xpHeadingAyan{
-font-size:22px;
-margin-bottom:15px;
-
-}
-
-.xpRowAyan{
-display:flex;
-gap:10px;
-margin-bottom:18px;
-
-
-}
-
-.xpRowAyan img{
-width:40px;
-height:40px;
-}
-
-.xpRowAyan p{
-font-size:13px;
-line-height:1.4;
-
-}
-
-
-
-
-
-
-/* =================================
-   SCROLLBAR (WINDOWS XP STYLE)
-================================= */
-
-::-webkit-scrollbar{
-width:14px;
-}
-
-::-webkit-scrollbar-track{
-background:#ece9d8;
-}
-
-::-webkit-scrollbar-thumb{
-background:#3a7bd5;
-border:2px solid #ece9d8;
-}
-
 
 /* =================================
    DESKTOP ICONS
 ================================= */
 
 .desktop-icons{
-z-index: 0.5;
-position:absolute;
-top:20px;
-left:20px;
-display:flex;
-flex-direction:column;
-gap:25px;
+    z-index: 0.5;
+    position:absolute;
+    top:20px;
+    left:20px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
 }
 
 .icon{
-text-align:center;
-width:80px;
-cursor:pointer;
+    text-align:center;
+    width:80px;
+    cursor:pointer;
 }
 
 .icon:hover{
-background:#00000018;
+    background:#00000018;
 }
 
 .icon img{
-width:35px;
-height:35px;
+    width:35px;
+    height:35px;
 }
 
 .icon p{
-color:white;
-font-size:14px;
-margin-top:5px;
-text-shadow:1px 1px 2px black;
+    color:white;
+    font-size:14px;
+    margin-top:5px;
+    text-shadow:1px 1px 2px black;
+    font-family: "VT323", "Pixelated MS Sans Serif", monospace;
 }
-
 
 /* =================================
-   PROJECT WINDOW
+   ABOUT ME WINDOW
 ================================= */
 
-.window{
-z-index: 3;
-display:none;
-width:800px;
-height:600px;
-border:3px solid #3a6edc;
-border-radius:7px;
-background:#111;
-}
-
-
-/* =================================
-   TITLE BAR
-================================= */
-
-.title-bar{
-height: 25px;
-background:linear-gradient(#3c7df0,#1c4db6);
-color:white;
-padding:6px 10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-font-size: medium;
-}
-
-.title-bar span{
-margin-right:600px;
-font-size: medium;
-}
-
-.window-buttons {
-display: flex;
-align-items: center;
-gap: 4px;
-width:60px;
-height:22px;
-border:none;
-border-radius:4px;
-margin-left:4px;
-cursor:pointer;
-}
-
-.MyProjectsmaximize{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
-}
-
-.MyProjectsminimize{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
-}
-
-.MyProjectClose{
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#ff5b5b;
-color: white;
-border:1px solid #333;
-cursor: pointer;
-}
-
-
-
-/* =================================
-   TOOLBAR
-================================= */
-
-.toolbar{
-background:#f6f4ec;
-padding:6px;
-font-size:14px;
-border-bottom:1px solid #b5b5b5;
-}
-
-.menu span{
-margin-right:15px;
-font-size: small;
-}
-
-.address-bar{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 780px;
-margin-top:5px;
-display:flex;
-gap:7px;
-}
-
-.address-bar input{
-height: 20px;
-
-flex:1;
-padding:4px;
-}
-
-#go{
-   display: flex;
-   align-items: center;
-}
-
-
-/* =================================
-   HEADER
-================================= */
-
-.site-header{
-height: 50px;
-background:#000;
-color:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 20px;
-border-bottom:1px solid #333;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo-icon{
-display: flex;
-justify-content: center;
-align-items: center;
-width:30px;
-height:30px;
-background:red;
-border-radius:6px;
-}
-
-.search input{
-height: 30px;
-width: 400px;
-padding:8px 15px;
-border-radius:20px;
-border:none;
-background:#1f1f1f;
-color:white;
-}
-
-
-/* =================================
-   SOCIAL ICONS
-================================= */
-
-.social{
-width:70px;
-height:30px;
-display:flex;
-align-items:center;
-justify-content:space-around;
-}
-
-.social img{
-cursor:pointer;
-}
-
-.social img:hover{
-height:23px;
-width:23px;
-}
-
-
-/* =================================
-   CONTENT LAYOUT
-================================= */
-
-.content{
-display:flex;
-}
-
-
-/* =================================
-   SIDEBAR
-================================= */
-
-.sidebar{
-width:180px;
-height:430px;
-background:#0b0b0b;
-border-right:1px solid #222;
-padding:20px;
-}
-
-.sidebar ul{
-list-style:none;
-
-}
-
-.sidebar li{
-display: flex;
-align-items: center;
-padding-left: 20px;
-height: 30px;
-margin-top: 10px;
-
-
-color:#ccc;
-cursor:pointer;
-}
-
-.sidebar li:hover{
-
-background:#1b1b1b;
-border-radius:6px;
-color:white;
-}
-
-.sidebar .active{
-background:#1b1b1b;
-
-border-radius:6px;
-color:white;
-}
-
-
-/* =================================
-   PROJECT CARDS
-================================= */
-
-.projects{
-flex:1;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.card{
-height:190px;
-width:250px;
-background:#0e0e0e;
-border:1px solid #2b2b2b;
-border-radius:2px;
-overflow:hidden;
-color:white;
-}
-
-.card img{
-width:100%;
-height:100px;
-object-fit:cover;
-}
-
-.card h3{
-padding:10px;
-font-size:18px;
-}
-
-.card p{
-padding:0 10px 10px;
-color:#aaa;
-font-size:14px;
-}
-
-
-/* =================================
-   CONTACT WINDOW
-================================= */
-
-.contact-me{
-z-index: 4;
-display:none;
-height: 600px;
-width:800px;
-border:2px solid #1e53c5;
-border-radius:6px;
-background:#ece9d8;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
-}
-
-.title-barr{
-height: 25px;
-background:linear-gradient(#3c7df0,#1c4db6);
-color:white;
-padding:5px 10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.title-barr #Header{
-margin-right:600px;
-font-size: medium;
-}
-
-
-
-.ContactMeMaximize{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
-}
-
-.ContactMeMinimize{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
-}
-
-.ContactMeCloseBtn{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#ff5b5b;
-color: white;
-border:1px solid #333;
-cursor: pointer;
-}
-
-
-/* =================================
-   CONTACT FORM
-================================= */
-
-.form{
-font-size: small;
-padding:10px;
-}
-
-.form input{
-width:100%;
-height: 25px;
-margin-top: 5px;
-padding:5px;
-margin-bottom:8px;
-border:1px solid #7f9db9;
-}
-
-textarea{
-width:100%;
-height:250px;
-margin-top: 5px;
-border:1px solid #7f9db9;
-resize:none;
-padding:8px;
-}
-
-.sendBtn{
-   margin-top: 5px;
-   height: 25px;
-   width: 100px;
-   font-size: small;
-   background-color:#2849bf;
-   border-color: #1649b7;
-   color: white;
-}
-
-.sendBtn:hover{
-   background-color: #0d3fab;
-}
-
-.footer{
-   height: 30px;
-font-size:12px;
-padding:5px;
-border-top:1px solid #b5b5b5;
-background:#f6f4ec;
-}
-
-
-/* =================================
-   TASKBAR
-================================= */
-
-#taskbar{
-z-index: 10;
-position:fixed;
-bottom:0;
-width:100%;
-height:25px;
-background:linear-gradient(#2e77d7,#1649b7);
-border:2px solid #2f68d9;
-display:flex;
-align-items:center;
-
-}
-
-
-/* =================================
-   START BUTTON
-================================= */
-
-#startButton{
-display:flex;
-align-items:center;
-background:linear-gradient(#5cbf2a,#3e8e1f);
-color:white;
-padding:5px 10px;
-border-top-right-radius:3px;
-border-bottom-right-radius:3px;
-cursor:pointer;
-font-weight:bold;
-height:22px;
-}
-
-#startButton:hover{
-background:linear-gradient(#55b126,#3d8e1c);
-}
-
-#startButton img{
-width:20px;
-margin-right:5px;
-}
-
-
-/* =================================
-   TASK ICONS
-================================= */
-
-#taskIcons{
-display:flex;
-
-}
-
-.task{
-   display: flex;
-   margin-left: 10px;
-   
-   height: 22px;
-   width: 800px;
-   
-}
-
-.tab{
-   display: none;
-   align-items: center;
-   height: 22px;
-   padding-left: 5px;
-   margin-left: 5px;
-   width: auto;
-   color: white;
-   font-size: small;
-   background-color: #0d3fab;
-   border-radius: 2px;
-   border: 2px solid #0a3287;
-}
-
-.tab span{
-   padding-left: 5px;
-}
-
-.tabCloseBtn{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 15px;
-   width: 15px;
-   margin-left: 15px;
-   margin-right: 5px;
-   padding-bottom: 2px;
-   background-color: rgba(219, 52, 52, 0.879);
-   border-radius: 1px;
-   cursor: pointer;
-
-}
-
-
-
-
-
-/* =================================
-   CLOCK
-================================= */
-
-#clock{
-margin-left:480px ;
-display:flex;
-align-items:center;
-width:160px;
-height:22px;
-background:#0e9bf0;
-color:white;
-font-size:14px;
-padding:3px;
-border-left:0.5px solid #000;
-}
-
-#clock img{
-margin-left:5px;
-cursor: pointer;
-}
-
-#task-time{
-margin-left:10px;
-width:80px;
-}
-
-
-
-
-
-/* =================================
-   START MENU 
-================================= */
-
-
-.start-menu{
-z-index: 2;
-display:none;
-margin-top: 190px;
-margin-right: 1165px;
-width:360px;
-background:#fff;
-border: 2px;
-font-family:Tahoma;
-box-shadow:0 0 10px rgba(0,0,0,0.4);
-}
-
-
-
-/* HEADER */
-
-.user-header{
-background:linear-gradient(#2f79d8,#1c4eb6);
-color:white;
-display:flex;
-align-items:center;
-padding:10px;
-font-weight:bold;
-height: 50px;
-
-}
-
-.user-header img{
-width:40px;
-height: 40px;
-margin-right:10px;
-border:2px solid #92deff;
-}
-
-/* BODY */
-
-.menu-body{
-display:flex;
-border-radius: 5px;
-}
-
-/* LEFT SIDE */
-
-.left-menu{
-width:60%;
-padding:10px;
-}
-
-.menu-item{
-display:flex;
-align-items:center;
-position: relative;
-gap:1px;
-padding:6px;
-cursor:pointer;
-}
-
-
-
-.menu-item span{
-   margin-left: 5px;
-}
-
-.Highlight-MenuItem{
-   margin-left: 5px;
-}
-
-.menu-item:hover{
-background-color: #2e77d7;
-
-
-}
-
-
-
-/* show on hover */
-.menu-item:hover::after{
-opacity:1;
-}
-
-.menu-item img{
-height: 25px;
-width: 25px;
-}
-
-/* DESCRIPTION TEXT */
-
-.menu-item p{
-font-size:12px;
-color:rgb(65, 65, 65);
-}
-
-/* RIGHT SIDE */
-
-.right-menu{
-width:50%;
-background:#d6e8ff;
-padding:10px;
-}
-
-.right-menu a{
-    text-decoration: none;   /* underline remove */
-    color: inherit;          /* text color same */
+#xpWrapAyan{
+    width:800px;
+    height:600px;
+    z-index: 5;
+    background:#f2f2f2;
+    border:2px solid #1e53c5;
+    border-radius: 5px;
+    font-family:Tahoma, Verdana, sans-serif;
+    display:none;
+    flex-direction:column;
+}
+
+.AboutMeHeader{
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-/* ALL PROGRAMS */
-
-.all-programs{
-margin-top:10px;
-margin-left: 25px;
-font-weight:bold;
-cursor:pointer;
+.xpTopBarAyan{
+    height: 30px;
+    background:linear-gradient(#3b73d9,#1e53c5);
+    color:white;
+    padding:6px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.all-programs span{
- color: rgb(5, 155, 5);
- 
+.xpTitleTextAyan{
+    font-size: medium;
+    margin-right: 610px;
+    font-family: "VT323", "Pixelated MS Sans Serif", monospace;
 }
 
-
-.all-programs:hover{
-color:rgb(5, 155, 5);
+.xpWindowButtonsAyan{
+    display:flex;
+    gap:4px;
 }
 
-/* FOOTER */
-
-.menu-footer{
-background:linear-gradient(#2f79d8,#1c4eb6);
-padding:10px;
-display:flex;
-justify-content:flex-end;
-gap:10px;
+.xpBtnAyan{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
 }
 
-.menu-footer button{
-border:none;
-padding:5px 10px;
-cursor:pointer;
+.xpBtnCloseAyan{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#ff5b5b;
+    border:1px solid #333;
+    cursor: pointer;
 }
 
-.log-off{
-display: flex;
-align-items: center;
-font-size: small;
-color: white;
-gap: 4px;
-cursor: pointer;
+.maximize{
+    cursor: pointer;
 }
 
-.shut-down{
-display: flex;
-align-items: center;
-font-size: small;
-color: white;
-gap: 4px;
-cursor: pointer;
-
+.minimize{
+    cursor: pointer;
 }
 
+.xpMenuStripAyan{
+    background:#e8e8e8;
+    padding:4px 10px;
+    font-size:13px;
+}
 
+.xpMenuStripAyan span{
+    margin-right:12px;
+}
 
+.xpToolbarAyan{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 2px;
+    background:#f6f6f6;
+    padding:6px 10px;
+    font-size:13px;
+    border-bottom:1px solid #ccc;
+}
 
+.xpToolbarAyan span{
+    margin-right:15px;
+    padding-left: 5px;
+}
 
+.Arrow{
+    opacity:0.4;
+}
 
+.opacity{
+    opacity: 0.4;
+}
+
+.xpAddressBarAyan{
+    display: flex;
+    align-items: center;
+    width: auto;
+    background:white;
+    padding:6px 10px;
+    border-bottom:1px solid #aaa7a7;
+    font-size:13px;
+}
+
+#AddressAboutMe{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin-left: 5px;
+    padding-left: 2px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.317) ;
+    font-size: small;
+}
+
+#addressdiv{
+    width: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.xpMainSectionAyan{
+    flex:1;
+    display:flex;
+}
+
+.xpLeftPanelAyan{
+    width:140px;
+    height: 100%;
+    background:linear-gradient(#7484fe,#3b47a5);
+    padding:6px;
+    overflow:auto;
+}
+
+.xpSideBoxAyan{
+    background:white;
+    border:1px solid #b4c6f2;
+    margin-bottom:10px;
+}
+
+.xpSideTitleAyan{
+    display: flex;
+    background:linear-gradient(#3a66d8,#1e4bc6);
+    color:white;
+    padding:4px;
+    font-size:14px;
+}
+
+.xpSideBoxAyan ul{
+    list-style:none;
+    padding:6px;
+    font-size:12px;
+}
+
+.xpSideBoxAyan span{
+    padding-left: 5px;
+}
+
+.xpSideBoxAyan li{
+    margin-bottom:8px;
+    cursor: pointer;
+}
+
+.xpSideBoxAyan li:hover{
+    background-color: rgb(235, 236, 237);
+}
+
+.xpContentPanelAyan{
+    flex:1;
+    padding:15px;
+    color:white;
+    background-color: #4251c1;
+}
+
+.xpHeadingAyan{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.xpRowAyan{
+    display:flex;
+    gap:10px;
+    margin-bottom:18px;
+}
+
+.xpRowAyan img{
+    width:40px;
+    height:40px;
+}
+
+.xpRowAyan p{
+    font-size:small;
+    line-height:1.2;
+}
 
 /* =================================
-           MY RESUME
+   MY RESUME WINDOW
 ================================= */
 
-
-
-/* XP Browser */
-
 .xp-browser{
-z-index: 5;
-width:800px;
-height:600px;
-border:3px solid #3a6edc;
-border-radius:6px;
-background:#ece9d8;
-display:none;
-flex-direction:column;
-overflow:hidden;
-
+    z-index: 5;
+    width:800px;
+    height:600px;
+    border:3px solid #3a6edc;
+    border-radius:6px;
+    background:#ece9d8;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
 }
 
-/* Title Bar */
+.MyResumeHeader{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 .xp-title-bar{
-   height: 25px;
-background:linear-gradient(#3c7df0,#1c4db6);
-color:white;
-padding:6px 10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-font-size: medium;
+    height: 30px;
+    background:linear-gradient(#3c7df0,#1c4db6);
+    color:white;
+    padding:6px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: medium;
 }
 
-
 .xp-title-bar span{
-margin-right: 600px;
-}  
+    margin-right: 600px;
+}
 
 .xp-buttons{
-display:flex;
-gap:4px;
+    display:flex;
+    gap:4px;
 }
 
 .xp-buttons .btn{
@@ -1081,139 +314,974 @@ gap:4px;
 }
 
 .btn{
-display: flex;
-justify-content: center;
-align-items: center;
-padding-bottom: 3px;
-width:18px;
-height:18px;
-background:#dcdcdc;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+    width:18px;
+    height:18px;
+    background:#dcdcdc;
 }
 
-
-
-
-
 .close{
-background:#e81123;
+    background:#e81123;
 }
 
 .xp-toolbar{
-display: flex;
-background:#e9e9e9;
-height: 30px;
-padding:8px;
-display:flex;
-gap:5px;
-align-items:center;
+    display: flex;
+    background:#e9e9e9;
+    height: 30px;
+    width: 100%;
+    padding:8px;
+    display:flex;
+    gap:5px;
+    align-items:center;
 }
 
 .xp-toolbar button{
-   background-color: #1649b7;
-   color: white;
-   font-size: small;
+    background-color: #1649b7;
+    color: white;
+    font-size: small;
 }
 
 .xp-toolbar span{
-   font-size: small;
-
+    font-size: small;
 }
 
 .xp-toolbar input{
-height: 20px;
-padding:3px;
-width: 600px;
-
+    height: 20px;
+    padding:3px;
+    width: 100%;
 }
 
-/* Browser Content */
-
 .xp-content{
-flex:1;
-background:white;
-overflow:hidden;
+    flex:1;
+    background:white;
+    overflow:hidden;
 }
 
 .xp-content iframe{
-width:100%;
-height:100%;
-border:none;
+    width:100%;
+    height:100%;
+    border:none;
 }
 
+/* =================================
+   PROJECT WINDOW
+================================= */
 
+.window{
+    z-index: 3;
+    display:none;
+    width:800px;
+    height:600px;
+    border:3px solid #3a6edc;
+    border-radius:7px;
+    background:#111;
+}
 
-/* ========================== PAINT ========================= */
+.MyProjectsHeader{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-bar{
+    height: 30px;
+    background:linear-gradient(#3c7df0,#1c4db6);
+    color:white;
+    padding:6px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: medium;
+}
+
+.title-bar span{
+    margin-right:600px;
+    font-size: medium;
+}
+
+.window-buttons{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width:60px;
+    height:22px;
+    border:none;
+    border-radius:4px;
+    margin-left:4px;
+    cursor:pointer;
+}
+
+.MyProjectsmaximize{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.MyProjectsminimize{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.MyProjectClose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#ff5b5b;
+    color: white;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.toolbar{
+    background:#f6f4ec;
+    padding:6px;
+    font-size:14px;
+    border-bottom:1px solid #b5b5b5;
+}
+
+.menu span{
+    margin-right:15px;
+    font-size: small;
+}
+
+.address-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top:5px;
+    display:flex;
+    gap:7px;
+}
+
+.address-bar input{
+    height: 20px;
+    flex:1;
+    padding:4px;
+}
+
+.site-header{
+    height: 50px;
+    background:#000;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 20px;
+    border-bottom:1px solid #333;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    height:30px;
+    background:red;
+    border-radius:6px;
+}
+
+.search input{
+    height: 30px;
+    width: 400px;
+    padding:8px 15px;
+    border-radius:20px;
+    border:none;
+    background:#1f1f1f;
+    color:white;
+}
+
+.social{
+    width:70px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.social img{
+    cursor:pointer;
+}
+
+.social img:hover{
+    height:23px;
+    width:23px;
+}
+
+.content{
+    display:flex;
+}
+
+.sidebar{
+    width:180px;
+    height:460px;
+    background:#0b0b0b;
+    border-right:1px solid #222;
+    padding:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 30px;
+    margin-top: 10px;
+    color:#ccc;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    background:#1b1b1b;
+    border-radius:6px;
+    color:white;
+}
+
+.sidebar .active{
+    background:#1b1b1b;
+    border-radius:6px;
+    color:white;
+}
+
+.projects{
+    flex:1;
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.card{
+    margin-left: 20px;
+    height:190px;
+    width:250px;
+    background:#0e0e0e;
+    border:1px solid #2b2b2b;
+    border-radius:1px;
+    overflow:hidden;
+    color:white;
+}
+
+.card img{
+    width:100%;
+    height: 115px;
+    object-fit:cover;
+    cursor: pointer;
+}
+
+.card h3{
+    padding:10px;
+    font-size:16px;
+}
+
+.card p{
+    padding:0 10px 10px;
+    color:#aaa;
+    font-size:12px;
+}
+
+/* =================================
+   CONTACT WINDOW
+================================= */
+
+.contact-me{
+    z-index: 4;
+    display:none;
+    height: 600px;
+    width:800px;
+    border:2px solid #1e53c5;
+    border-radius:6px;
+    background:#ece9d8;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.ContactMeHeader{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-barr{
+    height: 30px;
+    background:linear-gradient(#3c7df0,#1c4db6);
+    color:white;
+    padding:5px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.title-barr #Header{
+    margin-right:600px;
+    font-size: medium;
+}
+
+.ContactMeMaximize{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.ContactMeMinimize{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.ContactMeCloseBtn{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#ff5b5b;
+    color: white;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.form{
+    font-size: small;
+    padding:10px;
+}
+
+.form input{
+    width:100%;
+    height: 25px;
+    margin-top: 5px;
+    padding:5px;
+    margin-bottom:8px;
+    border:1px solid #7f9db9;
+}
+
+textarea{
+    width:100%;
+    height:250px;
+    margin-top: 5px;
+    border:1px solid #7f9db9;
+    resize:none;
+    padding:8px;
+}
+
+.sendBtn{
+    margin-top: 5px;
+    height: 25px;
+    width: 100px;
+    font-size: small;
+    background-color:#2849bf;
+    border-color: #1649b7;
+    color: white;
+}
+
+.sendBtn:hover{
+    background-color: #0d3fab;
+}
+
+.footer{
+    height: 30px;
+    font-size:12px;
+    padding:5px;
+    border-top:1px solid #b5b5b5;
+    background:#f6f4ec;
+}
+
+/* =================================
+   PAINT WINDOW
+================================= */
+
 .Paint-window{
-width:800px;
-height:600px;
-z-index: 5;
-background:#f2f2f2;
-border:2px solid #1e53c5;
-border-radius: 5px;
-font-family:Tahoma,Verdana;
-display:none;
-flex-direction:column;
-   
+    width:800px;
+    height:600px;
+    z-index: 5;
+    background:#f2f2f2;
+    border:2px solid #1e53c5;
+    border-radius: 5px;
+    font-family:Tahoma,Verdana;
+    display:none;
+    flex-direction:column;
 }
 
+.PaintHeader{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 .xp-paint{
-width:780px;
-height:300px;
-border:3px solid #000;
-background:#c0c0c0;
-display:flex;
-flex-direction:column;
-font-family:Tahoma;
+    width:780px;
+    height:300px;
+    border:3px solid #000;
+    background:#c0c0c0;
+    display:flex;
+    flex-direction:column;
+    font-family:Tahoma;
 }
 
 .tool-bar{
-display: flex;
-align-items: center;
-gap: 10px;
-margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 .tool-bar button{
-display: flex;
-align-items: center;
-justify-content: center;
-height: 20px;
-padding:5px 10px;
-margin-left: 10px;
-cursor:pointer;
-font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    padding:5px 10px;
+    margin-left: 10px;
+    cursor:pointer;
+    font-size: small;
 }
 
 #paintCanvas{
-flex:1;
-background:white;
-cursor:crosshair;
+    width: 800px;
+    height: 500px;
+    background: white;
+    cursor: crosshair;
+    display: block;
 }
 
 .Paintmaximize{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
 }
 
 .Paintminimize{
-padding-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-width:16px;
-height:16px;
-background:#e6e6e6;
-color: #000;
-border:1px solid #333;
-cursor: pointer;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
 }
+
+/* =================================
+   MY ACHIEVEMENTS WINDOW
+================================= */
+
+#xpExplorer{
+    z-index: 2;
+    width:800px;
+    height:600px;
+    background:#ffffff;
+    border:3px solid #0a246a;
+    display:none;
+    flex-direction:column;
+    border-radius: 7px;
+}
+
+.MyAchievementsHeader{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#xpHeader{
+    background:linear-gradient(#3a6ee8,#1f4db3);
+    color:white;
+    padding:6px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size: medium;
+    height: 25px;
+}
+
+#xpHeader span{
+    margin-right: 560px;
+}
+
+#xpControls{
+    display: flex;
+    gap: 4px;
+}
+
+.MyAchievementsClose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#ff5b5b;
+    border:1px solid #333;
+    cursor: pointer;
+    color: white;
+}
+
+.MyAchievementsmaximize{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+.MyAchievementsminimize{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+    height:16px;
+    background:#e6e6e6;
+    color: #000;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+#xpMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#f1efe2;
+    padding:5px 10px;
+    border-bottom:1px solid #c0c0c0;
+    font-family:tahoma;
+}
+
+#xpMenu span{
+    font-size: small;
+}
+
+#WindowLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 25px;
+}
+
+#xpMenuIcons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 10px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    height: 30px;
+    background-color: #f1efe2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.573);
+}
+
+.xpMenuItem{
+    margin-right:15px;
+    cursor:pointer;
+}
+
+#xpBody{
+    flex:1;
+    display:flex;
+}
+
+#xpSidebar{
+    width:160px;
+    background:linear-gradient(#2559ca,#3e6ecf);
+    padding:10px;
+}
+
+.xpPanel{
+    background:white;
+    padding:5px;
+    margin-bottom:10px;
+    font-size: small;
+}
+
+
+
+#xpMainArea {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 columns */
+  gap: 15px;
+  padding: 15px;
+}
+
+#item {
+  height: 130px;
+  width: 200px;
+  background-color:#ccc;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.xpFolderCard{
+    text-align:center;
+}
+
+.xpFolderIcon{
+    width:80px;
+    height:60px;
+    background:gold;
+    border:2px solid #c9a200;
+    border-radius:5px;
+}
+
+#xpFooter{
+    background:#ece9d8;
+    border-top:1px solid #c0c0c0;
+    padding:5px 10px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* =================================
+   START MENU
+================================= */
+
+.start-menu{
+    z-index: 2;
+    display:none;
+    margin-top: 190px;
+    margin-right: 1165px;
+    width:360px;
+    background:#fff;
+    border: 2px;
+    font-family:Tahoma;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+.user-header{
+    background:linear-gradient(#2f79d8,#1c4eb6);
+    color:white;
+    display:flex;
+    align-items:center;
+    padding:10px;
+    font-weight:bold;
+    height: 60px;
+}
+
+.user-header img{
+    width:40px;
+    height: 40px;
+    margin-right:10px;
+    border:2px solid #529dff;
+    background-color: #8ebffe;
+}
+
+.menu-body{
+    display:flex;
+    border-radius: 5px;
+}
+
+.left-menu{
+    width:60%;
+    padding:10px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    position: relative;
+    gap:1px;
+    padding:6px;
+    cursor:pointer;
+}
+
+.menu-item span{
+    margin-left: 5px;
+}
+
+.Highlight-MenuItem{
+    margin-left: 5px;
+}
+
+.menu-item:hover{
+    background-color: #73adff;
+}
+
+.menu-item:hover::after{
+    opacity:1;
+}
+
+.menu-item img{
+    height: 25px;
+    width: 25px;
+}
+
+.menu-item p{
+    font-size:12px;
+    color:rgb(65, 65, 65);
+}
+
+.right-menu{
+    width:50%;
+    background:#d6e8ff;
+    padding:10px;
+}
+
+.right-menu a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.all-programs{
+    margin-top:10px;
+    margin-left: 25px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.all-programs span{
+    color: rgb(5, 155, 5);
+}
+
+.all-programs:hover{
+    color:rgb(5, 155, 5);
+}
+
+.menu-footer{
+    background:linear-gradient(#2f79d8,#1c4eb6);
+    padding:10px;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.menu-footer button{
+    border:none;
+    padding:5px 10px;
+    cursor:pointer;
+}
+
+.log-off{
+    width: 80px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    color: white;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.log-off:hover{
+    background-color: #1c4db6;
+}
+
+.shut-down{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 25px;
+    font-size: small;
+    color: white;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.shut-down:hover{
+    background-color: #1c4db6;
+}
+
+/* =================================
+   TASKBAR
+================================= */
+
+#taskbar{
+    z-index: 10;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:25px;
+    background:linear-gradient(#2e77d7,#1649b7);
+    border:2px solid #2f68d9;
+    display:flex;
+    align-items:center;
+}
+
+#startButton{
+    display:flex;
+    align-items:center;
+    background:linear-gradient(#5cbf2a,#3e8e1f);
+    color:white;
+    padding:5px 10px;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    cursor:pointer;
+    font-weight:bold;
+    height:22px;
+}
+
+#startButton:hover{
+    background:linear-gradient(#55b126,#3d8e1c);
+}
+
+#startButton img{
+    width:20px;
+    margin-right:5px;
+}
+
+#taskIcons{
+    display:flex;
+}
+
+.task{
+    display: flex;
+    margin-left: 10px;
+    height: 22px;
+    width: 800px;
+}
+
+.tab{
+    display: none;
+    align-items: center;
+    height: 22px;
+    padding-left: 5px;
+    margin-left: 5px;
+    width: auto;
+    color: white;
+    font-size: small;
+    background-color: #0d3fab;
+    border-radius: 2px;
+    border: 2px solid #0a3287;
+}
+
+.tab span{
+    padding-left: 5px;
+}
+
+.tabCloseBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+    margin-right: 5px;
+    padding-bottom: 2px;
+    background-color: rgba(219, 52, 52, 0.879);
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#clock{
+    margin-left:480px ;
+    display:flex;
+    align-items:center;
+    width:160px;
+    height:22px;
+    background:#0e9bf0;
+    color:white;
+    font-size:14px;
+    padding:3px;
+    border-left:0.5px solid #000;
+}
+
+#clock img{
+    margin-left:5px;
+    cursor: pointer;
+}
+
+#task-time{
+    margin-left:10px;
+    width:80px;
+}
+
+/* =================================
+   COMMON / SHARED
+================================= */
+
+#go{
+    display: flex;
+    margin-left: 5px;
+    gap: 5px;
+}
+
+li a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =================================
+   SCROLLBAR (WINDOWS XP STYLE)
+================================= */
+
+::-webkit-scrollbar{
+    width:14px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ece9d8;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3a7bd5;
+    border:2px solid #ece9d8;
+}
+
+/* #infoContainer{
+    display: none;
+    margin-top: 610px;
+    margin-left: 1345px;
+    height: 25px;
+    width: 120px;
+    background-color: #fffafa;
+} */

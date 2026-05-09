@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    
+    height: 100%;
+    width: 100%;
+}
+
+#first{
+    height: 80px;
+    width: 100vw;
+    background-color: #1d33a3;
+
+}
+#second{
+    height: 538px;
+    width: 100vw;
+    background-color: #5b7edc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+#third{
+    height: 80px;
+    width: 100vw;
+    background-color: #1d33a3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
+
+}
+
+#third p{
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+    display: block;
+    margin-left: 1200px;
+    
+}
+
+
+#para{
+    margin-top: 25px;
+    
+
+    
+}
+
+.divider{
+  width:2px;
+  height: 400px;
+  background:linear-gradient(
+    to right,
+    rgba(255,255,255,0.35),
+    rgba(0,0,0,0.15)
+  );
+}
+
+#logo{
+    height: 400px;
+    width: 400px;
+    /* border-right: 2px solid rgba(255, 255, 255, 0.283); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+#logo img{
+    margin-left: 100px;
+}
+
+.xp-text{
+  margin-top: 20px;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+#profile-card{
+    margin-left: 40px;
+    height: 80px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+#profile-card:hover{
+    background: linear-gradient(
+        to right,
+        #1d33a3 0%,
+        #1d33a3 80%,
+        rgba(29, 51, 163, 0.132) 100%
+    );
+}
+/* Frontend Developer text orange */
+#profile-card:hover .user-name p{
+    color: #e3ad3a;
+}
+
+/* Image border orange */
+#profile-card:hover .profile-img{
+    border-color: #e3ad3a;
+}
+
+
+.profile-img{
+    height: 60px;
+    width: 60px;
+    padding: 2px;
+    border: 3px solid rgb(11, 27, 172);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #727272;
+}
+
+.profile-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user-name h4{
+    font-family: Tahoma, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.user-name p{
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    color: #001b9f;
+}
+
+
+#container{
+    display: flex;
+    align-items: center;
+}
+
+
+#box{
+    display: inline;
+    
+}
+
+#welcome{
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 58px; 
+    margin: 0; 
+    cursor: pointer;
+}
+
+
