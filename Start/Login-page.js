@@ -13,7 +13,7 @@ profileCard.addEventListener("click", function(){
      welcome.style.display = "flex"
 
      setTimeout(()=>{
-          window.location.href = "/Dashboard/dashboard.html";
+          window.location.href = "./dashboard.html";
           
      },3000)
 

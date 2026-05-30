@@ -534,14 +534,14 @@ const shutdown = document.querySelector(".shut-down")
 
 logOff.addEventListener("click" , function(){
     setTimeout(()=>{
-       window.location.href = "/Login-Page/Login-Page.html";
+       window.location.href = "./Login-Page.html";
     },2000)
 
 })
 
 shutdown.addEventListener("click" , function(){
     setTimeout(()=>{
-       window.location.href = "/Start/index.html";
+       window.location.href = "./index.html";
     },2000)
     
     
@@ -556,7 +556,7 @@ shutdown.addEventListener("click" , function(){
 // ================================ logoff & Shutdown=====================
 
 logoff.addEventListener("click", function(){
-    window.location.href = "/Login-Page/Login-Page.html";
+    window.location.href = "./Login-Page.html";
           
 })
 

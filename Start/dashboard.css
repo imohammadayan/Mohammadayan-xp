@@ -13,7 +13,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:url("/Dashboard/Assets/Dashboard-bg-with-logo.jpg");
+    background:url("./Assets/Dashboard-bg-with-logo.jpg");
     background-size:cover;
     font-family: Tahoma, "MS Sans Serif", sans-serif;
 }
