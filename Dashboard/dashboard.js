@@ -287,9 +287,9 @@ menu.style.display = "inline"
 
 // ================================= Window Sound ===================================
 
-// window.onload = function(){
-//     document.getElementById("xpSound").play();
-// }
+window.onload = function(){
+    document.getElementById("xpSound").play();
+}
 
 
 
